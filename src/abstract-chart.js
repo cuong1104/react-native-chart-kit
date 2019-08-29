@@ -136,7 +136,7 @@ class AbstractChart extends Component {
             (((width - paddingRight) / labels.length) * i +
               paddingRight +
               horizontalOffset) *
-            fac
+            fac+25*i
           }
           y={(height * 3) / 4 + paddingTop + fontSize * 2}
           fontSize={fontSize}
