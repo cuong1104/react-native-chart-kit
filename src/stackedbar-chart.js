@@ -42,11 +42,11 @@ class StackedBarChart extends AbstractChart {
         ret.push(
           <Text
             key={Math.random()}
-            x={xC + 7 + barWidth / 2}
-            textAnchor="end"
+            x={xC + 0 + barWidth / 2}
+            textAnchor="middle"
             y={h > 15 ? y + 15 : y + 7}
             fontSize={12}
-            fill="#fff">
+            fill="#f2f2f2">
             {x[z]}
           </Text>,
         );
@@ -141,7 +141,7 @@ class StackedBarChart extends AbstractChart {
               ? this.renderVerticalLabels({
                   ...config,
                   labels: data.labels,
-                  paddingRight: paddingRight + 28,
+                  paddingRight: paddingRight + 48,
                   stackedBar: true,
                   paddingTop,
                   horizontalOffset: barWidth,
