@@ -29,6 +29,10 @@ class StackedBarChart extends AbstractChart {
             (i * (width - paddingRight)) / data.length +
             barWidth / 2) *
           0.9;
+        if (!h) {
+          continue;
+        }
+        console.log('w=' + barWidth + ' h=' + h);
         ret.push(
           <Rect
             key={Math.random()}
@@ -104,6 +108,8 @@ class StackedBarChart extends AbstractChart {
       }
     }
 
+    console.log('height=' + height);
+    console.log('width=' + width);
     return (
       <View style={style}>
         <Svg height={height} width={width}>
